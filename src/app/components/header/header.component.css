@@ -1,3 +1,8 @@
 .nav-link:hover{
   color: lime;
 }
+
+.img{
+  max-width : 80%;
+  max-height: 80vh;
+}
