@@ -1,0 +1,2 @@
+Preparando todo para hacer el merge con features de
+HEADER COMPONENT
