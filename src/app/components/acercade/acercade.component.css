@@ -1,0 +1,47 @@
+.row{
+  padding: 20px;
+  /*align-items:baseline;*/
+}
+
+div{
+  background-color: #a1b5cb;
+  text-align:center;
+  /*overflow: hidden;*/
+}
+
+/*estilo de la foto de perfil*/
+#fotodeperfil{
+  width:auto;
+  border-radius: 10%;
+  transition-delay: 1s;
+  transition: border-radius 1s linear; 
+}
+/*etiqueta nombre*/
+#nombre{
+  font-weight: bold;
+  margin-top : 1%;
+}
+/*h3 acerca de mi*/
+#acerca_de_mi{
+  margin-top : 2%;
+  overflow-y:hidden;
+}
+@media(min-width: 576px){
+  #fotodeperfil{
+    position:relative;
+    width   :25vw;
+    border-radius: 50%;
+    box-shadow:  3px 3px 3px rgb(65, 65, 65);
+    top: -6rem;    
+    max-height: 80%;
+    max-width:  50%;
+  }
+  div{
+    overflow-x:visible;  
+  }
+  /*etiqueta nombre*/
+  #nombre{
+    font-weight: bold;
+    margin-top : -5em;
+  }
+}
