@@ -1,2 +1,8 @@
 Preparando todo para hacer el merge con features de
+ACERCADE COMPONENT
+
+TODO: Ajustar en header component la altura de la imagen del banner para que sea visible
+      el nombre y la foto de perfil
+
+Preparando todo para hacer el merge con features de
 HEADER COMPONENT
