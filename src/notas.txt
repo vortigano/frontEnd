@@ -1,3 +1,6 @@
+Preparando para hacer el merge con fix de
+HEADER COMPONENT
+
 Preparando todo para hacer el merge con features de
 ACERCADE COMPONENT
 
