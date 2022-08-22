@@ -13,8 +13,10 @@ div{
 #fotodeperfil{
   width:auto;
   border-radius: 10%;
-  transition-delay: 1s;
-  transition: border-radius 1s linear; 
+  border-radius: 50%;
+  box-shadow:  3px 3px 3px rgb(65, 65, 65);
+  max-height: 50%;
+  max-width:  50%;  
 }
 /*etiqueta nombre*/
 #nombre{
@@ -26,13 +28,13 @@ div{
   margin-top : 2%;
   overflow-y:hidden;
 }
-@media(min-width: 576px){
+@media(min-width: 576px) and (max-width:2459px){
   #fotodeperfil{
     position:relative;
     width   :25vw;
     border-radius: 50%;
     box-shadow:  3px 3px 3px rgb(65, 65, 65);
-    top: -6rem;    
+    top: -8rem;    
     max-height: 80%;
     max-width:  50%;
   }
@@ -42,6 +44,25 @@ div{
   /*etiqueta nombre*/
   #nombre{
     font-weight: bold;
-    margin-top : -5em;
+    margin-top : -6em;
+  }
+}
+@media(min-width:2460px){
+  #fotodeperfil{
+    position:relative;
+    width   :25vw;
+    border-radius: 50%;
+    box-shadow:  3px 3px 3px rgb(65, 65, 65);
+    top: -13em;    
+    max-height: 80%;
+    max-width:  50%;
+  }
+  div{
+    overflow-x:visible;  
+  }
+  /*etiqueta nombre*/
+  #nombre{
+    font-weight: bold;
+    margin-top : -6em;
   }
 }
