@@ -8,16 +8,24 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CircleProgressBarComponent implements OnInit {
   @Input()
-  public mi_var : number;
+  progress : number;
   @Input()
   label  : string;
   @Input()
   url     : string;
-
+  @Input()
+  bgcolor: string;
+  @Input()
+  shadow : string;
+  @Input()
+  boxShadow: string;
   constructor() {
-    this.mi_var = 10;
-    this.label  = "";
-    this.url    = "";
+    this.progress = 0;
+    this.label  = '';
+    this.url    = '';
+    this.bgcolor = '';
+    this.shadow = '';
+    this.boxShadow = 'inset 11px 8px 11px 3px #cfb2b2, 16px 9px 13px 3px #373c35';
   }
 
   ngOnInit(): void {

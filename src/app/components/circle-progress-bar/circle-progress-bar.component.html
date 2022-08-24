@@ -1,17 +1,17 @@
 
   <div class="card">
     <div class="box">
-        <div class="percent"  [style.--mi_valor]="440 - (440 * mi_var /100)">
+        <div class="percent"  [style.--mi_valor]="440 - (440 * progress /100)">
           <svg>
-            <circle cx="70" cy="70" r="70"></circle>
             <circle cx="70" cy="70" r="70"></circle>
           </svg>
           
           <div class="number">
             <img id="mi_logo"
               src={{url}}
-              style="position:absolute;">
-            <p>{{mi_var}}<span>%</span></p>
+              [style.box-shadow]="boxShadow"
+              [style.background-color]="bgcolor">
+            <!--p>{{progress}}<span>%</span></p>-->
           </div>
           
         </div>

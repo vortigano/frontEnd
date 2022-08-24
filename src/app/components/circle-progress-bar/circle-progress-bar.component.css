@@ -18,15 +18,18 @@
   justify-content: center;
   align-items: center;
   height: 300px;
-  border-radius: 4px;
+  border-radius: 19px;
   text-align: center;
+  text-align: -webkit-center;
+  
   overflow: hidden;
   transition: 0.5s;
+  box-shadow: inset 3px 3px 8px 0px #fff5f5;
 }
 
 /*.container*/ .card:hover {
   transform: translateY(10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+  box-shadow: inset 3px 3px 8px 0px #fff5f5;
 }
 
 /*.container*/ .card:before {
@@ -98,7 +101,7 @@
 
 #mi_logo{
   position: absolute;
-  border-radius: 25% 25% 25% 25%;
+  border-radius: 20% 20% 20% 20%;
   scale: 20%;
   max-width: 25em;
   max-height: 25em;
