@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./circle-progress-bar.component.css']
 })
 export class CircleProgressBarComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit(): void {
