@@ -1,21 +1,20 @@
-<div class="container">
-  
+
   <div class="card">
     <div class="box">
-      <ng-template #$mi_temp_var [ngTemplateOutlet]="$mi_temp_var"
-        let-a [ngTemplateOutletContext]="{ $implicit: 100}">
-        <div class="percent"  [style.--mi_valor]="440 - (440 * a)/100">
+        <div class="percent"  [style.--mi_valor]="440 - (440 * mi_var /100)">
           <svg>
             <circle cx="70" cy="70" r="70"></circle>
             <circle cx="70" cy="70" r="70"></circle>
           </svg>
+          
           <div class="number">
-            <h2>{{a}}<span>%</span></h2>
+            <img id="mi_logo"
+              src={{url}}
+              style="position:absolute;">
+            <p>{{mi_var}}<span>%</span></p>
           </div>
+          
         </div>
-        <h2 class="text">test</h2>
-      </ng-template>
+        <h2 class="text">{{label}}</h2>
     </div>
   </div>
-  
-</div>

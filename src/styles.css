@@ -2,3 +2,10 @@
 /**{
   overflow-x:hidden;
 }*/
+/**{
+  padding-right: 0em;
+}
+
+.row{
+  --bs-gutter-x:0em;
+}*/

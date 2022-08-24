@@ -2,14 +2,15 @@
   --mi_valor: 0;
 }
 
-.container {
+/*.container {
   position: relative;
   width: 900px;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
-}
+}*/
 
-.container .card {
+/*.container*/ .card {
   position: relative;
   width: 259px;
   background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
@@ -23,12 +24,12 @@
   transition: 0.5s;
 }
 
-.container .card:hover {
+/*.container*/ .card:hover {
   transform: translateY(10px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
 }
 
-.container .card:before {
+/*.container*/ .card:before {
   content: '';
   position: absolute;
   top: 0;
@@ -91,8 +92,24 @@
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   transition: 0.5s;
+}
+
+#mi_logo{
+  position: absolute;
+  border-radius: 25% 25% 25% 25%;
+  scale: 20%;
+  max-width: 25em;
+  max-height: 25em;
+  min-width : 20em;
+  min-height : 20em;
+  /*color: #777;*/
+  /*margin-top: 20px;*/
+  /*font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;*/
+  /*transition: 0.5s;*/
 }
 
 .card:hover .text {
@@ -104,6 +121,7 @@ svg {
   width: 150px;
   height: 150px;
   z-index: 1000;
+  transform: rotate(-90deg);
 }
 
 svg circle{
@@ -118,7 +136,7 @@ svg circle{
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(.12,0,0,.99);
   animation-fill-mode:forwards; 
-  animation-iteration-count: infinite;
+  /*animation-iteration-count: infinite;*/
 }
 
 svg circle{
