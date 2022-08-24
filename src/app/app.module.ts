@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AcercadeComponent } from './components/acercade/acercade.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
+import { CircleProgressBarComponent } from './components/circle-progress-bar/circle-progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { EducacionComponent } from './components/educacion/educacion.component';
     AcercadeComponent,
     ExperienciaComponent,
     EducacionComponent,
+    CircleProgressBarComponent,
   ],
   imports: [
     BrowserModule,
