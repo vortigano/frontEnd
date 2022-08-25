@@ -1,0 +1,21 @@
+.nav-link:hover{
+  color: lime;
+}
+
+.navbar-id{
+  background-color: #000000;
+  overflow:hidden;
+}
+
+hr{
+  color:aliceblue;
+}
+
+#img-logoAP, #img-logoGithub, #img-logoLinkedin{
+  height: 3.5em;
+}
+
+#img-banner{
+  max-width : 80%;
+  max-height: 60vh; 
+}

@@ -1,0 +1,112 @@
+.row{
+  padding: 20px;
+  /*align-items:baseline;*/
+}
+
+div{
+  background-color: #a1b5cb;
+  text-align:center;
+  /*overflow: hidden;*/
+}
+
+/*estilo de la foto de perfil*/
+#fotodeperfil{
+  width:auto;
+  border-radius: 10%;
+  border-radius: 50%;
+  box-shadow:  3px 3px 3px rgb(65, 65, 65);
+  max-height: 50%;
+  max-width:  50%;  
+}
+/*etiqueta nombre*/
+#nombre{
+  font-weight: bold;
+  margin-top : 1%;
+}
+/*h3 acerca de mi*/
+#acerca_de_mi{
+  margin-top : 2%;
+  overflow-y:hidden;
+}
+/*@media(width>576px),(width<1480px){*/
+@media(width>576px){
+  #fotodeperfil{
+    position:relative;
+    width   :25vw;
+    border-radius: 50%;
+    box-shadow:  3px 3px 3px rgb(65, 65, 65);
+    top: -8rem;    
+    max-height: 80%;
+    max-width:  50%;
+  }
+  div{
+    overflow-x:visible;
+  }
+  /*etiqueta nombre*/
+  #nombre{
+    font-weight: bold;
+    margin-top : -6em;
+  }
+}
+
+/*@media(width>1481px)and(width<1719px){*/
+@media(width>1481px){
+  #fotodeperfil{
+    position:relative;
+    width   :25vw;
+    border-radius: 50%;
+    box-shadow:  3px 3px 3px rgb(65, 65, 65);
+    top: -10em;    
+    max-height: 80%;
+    max-width:  50%;
+  }
+  div{
+    overflow-x:visible;  
+  }
+  /*etiqueta nombre*/
+  #nombre{
+    font-weight: bold;
+    margin-top : -8em;
+  }
+}
+
+/*@media(width>1720px)and(width<2199px){*/
+@media(width>1720px){
+  #fotodeperfil{
+    position:relative;
+    width   :25vw;
+    border-radius: 50%;
+    box-shadow:  3px 3px 3px rgb(65, 65, 65);
+    top: -14rem;    
+    max-height: 80%;
+    max-width:  50%;
+  }
+  div{
+    overflow-x:visible;  
+  }
+  /*etiqueta nombre*/
+  #nombre{
+    font-weight: bold;
+    margin-top : -10em;
+  }
+}
+
+@media (width>2200px){
+  #fotodeperfil{
+    position:relative;
+    width   :25vw;
+    border-radius: 50%;
+    box-shadow:  3px 3px 3px rgb(65, 65, 65);
+    top: -16em;    
+    max-height: 80%;
+    max-width:  50%;
+  }
+  div{
+    overflow-x:visible;  
+  }
+  /*etiqueta nombre*/
+  #nombre{
+    font-weight: bold;
+    margin-top : -13em;
+  }
+}

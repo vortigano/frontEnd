@@ -1,0 +1,26 @@
+Preparando para merge con
+HARD AND SOFT SKILLS
+  CIRCLE-PROGRESS-BAR propia
+
+
+Preparando para merge con
+EDUCACION
+
+Preparando para merge con
+EXPERIENCIA COMPONENT
+
+Preparando para hacer el merge con ajust de
+ACERCADE COMPONENT
+
+Preparando para hacer el merge con fix de
+HEADER COMPONENT
+
+Preparando todo para hacer el merge con features de
+ACERCADE COMPONENT
+
+TODO: Ajustar en header component la altura de la imagen del banner para que sea visible
+      el nombre y la foto de perfil
+HECHO: Ajustado y añadido @media para ajustar foto de perfil y nombre en acerca de
+
+Preparando todo para hacer el merge con features de
+HEADER COMPONENT
