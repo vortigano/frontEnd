@@ -1,0 +1,20 @@
+
+  <div class="card">
+    <div class="box">
+        <div class="percent"  [style.--mi_valor]="440 - (440 * progress /100)">
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+          </svg>
+          
+          <div class="number">
+            <img id="mi_logo"
+              src={{url}}
+              [style.box-shadow]="boxShadow"
+              [style.background-color]="bgcolor">
+            <!--p>{{progress}}<span>%</span></p>-->
+          </div>
+          
+        </div>
+        <h2 class="text">{{label}}</h2>
+    </div>
+  </div>
