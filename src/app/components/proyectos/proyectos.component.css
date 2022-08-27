@@ -1,0 +1,14 @@
+.row{
+  padding: 3em;
+  background-color: rgb(97, 196, 235);
+}
+
+.titulo_descripcion, .img-proyecto{
+  margin-bottom: 1.2em;
+  display: inline-block;
+  text-align: justify;
+}
+
+.img-proyecto{
+  box-shadow: 10px 10px 30px #000;
+}
