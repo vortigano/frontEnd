@@ -14,7 +14,7 @@ export class AcercadeComponent implements OnInit {
 
   ngOnInit(): void {
     //conecto observer suscribiendo
-    this.personaService.getPersona().subscribe(data => {this.persona = data})
+    //this.personaService.getPersona().subscribe(data => {this.persona = data})
   }
 
 }
