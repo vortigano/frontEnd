@@ -21,7 +21,10 @@
       <ul class="navbar-nav align-items-center flex-row-reverse">
 
         <li class="nav-item p-2">
-          <a class="btn btn-light bi-lock" href="#" role="button">Login</a>
+          <!--a class="btn btn-light bi-lock" href="login" role="button">Login</a-->
+          <!--a class="btn btn-light bi-lock" href="login" role="button">Login</a-->
+          <a class="btn btn-light bi-lock" href="login" role="button" (click)="logIn()" *ngIf="!isLogged">Ingreso</a>
+          <a class="btn btn-light bi-lock" href="login" role="button" (click)="onLogout()" *ngIf="isLogged">Cerrar sesión</a>
         </li>
 
         <li class="nav-item p-2">
