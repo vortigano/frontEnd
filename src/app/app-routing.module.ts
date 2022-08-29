@@ -5,11 +5,15 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 
+/**
+ * editexp/:id
+ * donde :id es un número
+ */
 const routes: Routes = [
-  {path: '',          component: HomeComponent},
-  {path: 'login',     component: LoginComponent},
-  {path: 'nuevaexp',  component: NewExperienciaComponent},
-  {path: 'editexp',   component: EditExperienciaComponent}
+  {path: '',              component: HomeComponent},
+  {path: 'login',         component: LoginComponent},
+  {path: 'nuevaexp',      component: NewExperienciaComponent},
+  {path: 'editexp/:id',   component: EditExperienciaComponent}
 ];
 
 @NgModule({
