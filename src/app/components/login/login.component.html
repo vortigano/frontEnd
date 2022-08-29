@@ -13,12 +13,12 @@
               <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
 
                 <div class="form-outline form-white mb-4">
-                  <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg" [(ngModel)]="nombreUsuario" requiered/>
+                  <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg" [(ngModel)]="nombreUsuario" required/>
                   <label class="form-label" for="nombreUsuario">Usuario</label>
                 </div>
   
                 <div class="form-outline form-white mb-4">
-                  <input type="password" id="password" class="form-control form-control-lg" [(ngModel)]="password" requierd/>
+                  <input type="password" id="password" name="password" class="form-control form-control-lg" [(ngModel)]="password" required/>
                   <label class="form-label" for="password">Contraseña</label>
                 </div>
   
