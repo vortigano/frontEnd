@@ -1,30 +1,29 @@
-<div  class="row">
-  <h3>Educación</h3>
+<div class="row">
+  <h3>Educacion</h3>
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+      Agregar educacion
+    </button>
+  </div>
   <div class="col-lg-1"></div>
   <div class="col-lg-11">
-    <ul>
-      <li>
-        <h4>Estudio 1</h4>-<h5>(years)</h5>
-      </li>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, temporibus pariatur quidem a eaque dicta natus consequuntur sed ut ab corrupti eos, harum maiores! Suscipit nesciunt nisi dolore. Vel, cum.
-      </p>
-    </ul>
-    <ul>
-      <li>
-        <h4>Estudio 2</h4>-<h5>(years)</h5>
-      </li>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, temporibus pariatur quidem a eaque dicta natus consequuntur sed ut ab corrupti eos, harum maiores! Suscipit nesciunt nisi dolore. Vel, cum.
-      </p>
-    </ul>
-    <ul>
-      <li>
-        <h4>Estudio 3</h4>-<h5>(years)</h5>
-      </li>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, temporibus pariatur quidem a eaque dicta natus consequuntur sed ut ab corrupti eos, harum maiores! Suscipit nesciunt nisi dolore. Vel, cum.
-      </p>
-    </ul>
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Educacion of educacion">
+          <td><h3>{{Educacion.nombreE}}</h3></td>
+          <td>{{Educacion.descripcionE}}</td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-light" routerLink="/editexp/{{Educacion.id}}">
+              <i class="bi bi-pencil-fill"></i> EDITAR </button>
+          </td>
+            
+          <td *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="borrar(Educacion.id)">
+              <i class="bi bi-trash-fill"></i>BORRAR</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
+
