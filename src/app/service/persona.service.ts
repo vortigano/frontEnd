@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { persona } from '../model/persona.model';
 
 @Injectable({
@@ -9,7 +10,8 @@ import { persona } from '../model/persona.model';
 export class PersonaService {
   //https://backendcam.herokuapp.com/
   //baseURL = 'http://localhost:8080/personas/';
-  baseURL = 'https://backendcam.herokuapp.com/personas/';
+  //baseURL = 'https://backendcam.herokuapp.com/personas/';
+  baseURL = environment.urlBase + 'personas/';
 
   constructor(private http: HttpClient) { }
 
