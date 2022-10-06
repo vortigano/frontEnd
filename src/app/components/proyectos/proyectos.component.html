@@ -1,21 +1,27 @@
 <div class="row">
   <h3>Proyectos</h3>
-  <div class="container-fluid test">
-    <div class="col-sm-12 col-md-7 col-lg-7 titulo_descripcion">
-      <h3>Nombre de proyecto</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum iure repudiandae illum asperiores sint cum sit ex, vel officiis in porro pariatur unde repellendus ipsa aliquid dolorem ducimus deserunt quasi?</p>
-    </div>
-    <div class="col-sm-12 col-md-12 col-lg-4" style="float:right;">
-      <img class="img-fluid img-proyecto" src="https://e7.pngegg.com/pngimages/879/832/png-clipart-computer-program-openui5-webstorm-intellij-idea-screenshot-others-text-computer-program.png">
-    </div>
+  <div class="col-lg-2">
+    <button class="btn btn-dark"  type="button" routerLink="/nuevoproyecto" *ngIf="isLogged">Nuevo Proyecto</button>
   </div>
-  <div class="container-fluid">
+
+  <div class="container-fluid test" *ngFor="let proyecto of proyecto">
+    
     <div class="col-sm-12 col-md-7 col-lg-7 titulo_descripcion">
-      <h3>Nombre de proyecto</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum iure repudiandae illum asperiores sint cum sit ex, vel officiis in porro pariatur unde repellendus ipsa aliquid dolorem ducimus deserunt quasi?</p>
+      <h3>{{proyecto.nombre}}</h3>
+      <p>{{proyecto.descripcion}}</p>
+      
+      <td *ngIf="isLogged">
+        <button class="btn btn-light" routerLink="/editproyecto/{{proyecto.id}}">
+          <i class="bi bi-pencil-fill"></i></button>
+      </td>
+        
+      <td *ngIf="isLogged">
+        <button class="btn btn-danger" (click)="delete(proyecto.id)">
+          <i class="bi bi-trash-fill"></i>Borrar</button>
+      </td>
     </div>
-    <div class="col-sm-12 col-md-12 col-lg-4" style="float:right;">
-      <img class="img-fluid img-proyecto" src="https://e7.pngegg.com/pngimages/879/832/png-clipart-computer-program-openui5-webstorm-intellij-idea-screenshot-others-text-computer-program.png">
+    <div class="col-sm-12 col-md-4 col-lg-4" style="text-align:center; float:right;">
+      <img class="img-fluid img-proyecto" src={{proyecto.img}}>
     </div>
   </div>
 </div>
