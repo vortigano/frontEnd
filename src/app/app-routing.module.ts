@@ -8,20 +8,24 @@ import { EditSkillComponent } from './components/hard-and-soft-skills/edit-skill
 import { NewSkillComponent } from './components/hard-and-soft-skills/new-skill.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { EditProyectoComponent } from './components/proyectos/edit-proyecto.component';
+import { NewProyectoComponent } from './components/proyectos/new-proyecto.component';
 
 /**
  * editexp/:id
  * donde :id es un número
  */
 const routes: Routes = [
-  {path: '',              component: HomeComponent},
-  {path: 'login',         component: LoginComponent},
-  {path: 'nuevaexp',      component: NewExperienciaComponent},
-  {path: 'editexp/:id',   component: EditExperienciaComponent},
-  {path: 'nuevaedu',      component: NewEducacionComponent},
-  {path: 'editedu/:id',   component: EditEducacionComponent},
-  {path: 'nuevaskill',    component: NewSkillComponent},
-  {path: 'editskill/:id', component: EditSkillComponent}
+  {path: '',                  component: HomeComponent},
+  {path: 'login',             component: LoginComponent},
+  {path: 'nuevaexp',          component: NewExperienciaComponent},
+  {path: 'editexp/:id',       component: EditExperienciaComponent},
+  {path: 'nuevaedu',          component: NewEducacionComponent},
+  {path: 'editedu/:id',       component: EditEducacionComponent},
+  {path: 'nuevaskill',        component: NewSkillComponent},
+  {path: 'editskill/:id',     component: EditSkillComponent},
+  {path: 'nuevoproyecto',     component: NewProyectoComponent},
+  {path: 'editproyecto/:id',  component: EditProyectoComponent}
 ];
 
 @NgModule({
