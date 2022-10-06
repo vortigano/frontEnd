@@ -11,7 +11,7 @@
     <app-circle-progress-bar 
       [progress]="(skill.porcentaje)" 
       [label]="(skill.nombre)" 
-      [url]="'https://www.clipartmax.com/png/small/351-3515666_c-language-global-or-external-variables-with-examples-c-programming-logo.png'">
+      [url]="(skill.img_url)">
     </app-circle-progress-bar>
 
     <td *ngIf="isLogged">
