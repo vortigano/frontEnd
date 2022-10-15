@@ -1,0 +1,43 @@
+<div class="container" *ngIf="persona">
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+        </div>
+        <div class="form-group">
+          <label for="subtitulo">subtitulo</label>
+          <input type="text" class="form-control" id="subtitulo" name="subtitulo" [(ngModel)]="persona.subtitulo" required>
+        </div>
+        <div class="form-group">
+          <label for="acerca_de_mi">acerca_de_mi</label>
+          <input type="text" class="form-control" id="acerca_de_mi" name="acerca_de_mi" [(ngModel)]="persona.acerca_de_mi" required>
+        </div>
+        <div class="form-group">
+          <label for="img_perfil">img_perfil</label>
+          <input type="text" class="form-control" id="img_perfil" name="img_perfil" [(ngModel)]="persona.img_perfil" required>
+        </div>
+        <div class="form-group">
+          <label for="img_banner">img_banner</label>
+          <input type="text" class="form-control" id="img_banner" name="img_banner" [(ngModel)]="persona.img_banner" required>
+        </div>
+        <!--
+          this.nombre = nombre;
+          this.apellido = apellido;
+          this.titulo_acerca_de_mi = titulo_acerca_de_mi;
+          this.acerca_de_mi = acerca_de_mi;
+          this.img_perfil = img_perfil;
+          this.img_banner = img_banner;
+        -->
+        <button class="btn btn-primary">
+          Actualizar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
