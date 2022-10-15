@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { persona } from 'src/app/model/persona';
+import { PersonaService } from 'src/app/service/s-persona';
 import { TokenService } from 'src/app/service/token.service';
 
 @Component({
@@ -8,14 +10,16 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  persona: persona  = new persona("","","","","","");
   isLogged = false;
 
-  constructor(private router: Router, private tokenService: TokenService) { }
+  constructor(public personaService: PersonaService, private router: Router, private tokenService: TokenService) { }
 
   ngOnInit(): void {
+    this.personaService.getPersona().subscribe(data => {this.persona = data})
     if(this.tokenService.getToken()){
       this.isLogged = true;
-    }else{
+    } else {
       this.isLogged = false;
     }
   }
@@ -30,5 +34,6 @@ export class HeaderComponent implements OnInit {
 
   logIn(){
     this.router.navigate(['/login'])
+    
   }
 }
