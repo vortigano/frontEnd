@@ -110,3 +110,13 @@ div{
     margin-top : -13em;
   }
 }
+
+.list-group{
+  flex-direction: row-reverse;
+}
+
+.list-group-item{
+  padding: 0;
+  border-color:#00000000;
+  background-color:inherit;
+}

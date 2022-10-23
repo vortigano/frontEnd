@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { AcercadeComponent } from './components/acercade/acercade.component';
+import { PersonaComponent } from './components/persona/persona.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { CircleProgressBarComponent } from './components/circle-progress-bar/circle-progress-bar.component';
@@ -24,11 +24,12 @@ import { EditSkillComponent } from './components/hard-and-soft-skills/edit-skill
 import { NewSkillComponent } from './components/hard-and-soft-skills/new-skill.component';
 import { EditProyectoComponent } from './components/proyectos/edit-proyecto.component';
 import { NewProyectoComponent } from './components/proyectos/new-proyecto.component';
+import { EditPersonaComponent } from './components/persona/edit-persona.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AcercadeComponent,
+    PersonaComponent,
     ExperienciaComponent,
     EducacionComponent,
     CircleProgressBarComponent,
@@ -45,6 +46,7 @@ import { NewProyectoComponent } from './components/proyectos/new-proyecto.compon
     NewSkillComponent,
     EditProyectoComponent,
     NewProyectoComponent,
+    EditPersonaComponent,
   ],
   imports: [
     BrowserModule,
