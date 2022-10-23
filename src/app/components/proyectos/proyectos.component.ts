@@ -27,7 +27,7 @@ export class ProyectosComponent implements OnInit {
   cargarProyectos(): void{
     this.proyectoS.lista().subscribe(
       data =>{
-        this.proyecto = data;
+        this.proyecto = data.reverse();
       }
     )
   }
