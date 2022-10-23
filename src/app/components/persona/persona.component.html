@@ -13,17 +13,21 @@
         <i class="bi bi-pencil-fill"></i></button>
     </td>
   </div>
-  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 g-0" style="background-color:brown">
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 g-0 " style="background-color:brown">
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item" *ngIf="isLogged">
+        <button class="btn btn-success" routerLink="/editar/{{persona.id}}">
+          <i class="bi bi-pencil-fill"></i></button>
+      </li>
+      <li class="list-group-item" *ngIf="isLogged&&persona.acerca_de_mi!=''">
+        <button class="btn btn-danger" routerLink="/editar/{{persona.id}}">
+          <i class="bi bi-trash-fill"></i></button>
+      </li>  
+    </ul>
     <h3 id="acerca_de_mi" *ngIf="persona.acerca_de_mi!=''" >Acerca de mí</h3>
     <p>{{persona.acerca_de_mi}}</p>
-    <td *ngIf="isLogged">
-      <button class="btn btn-light" routerLink="/editar/{{persona.id}}">
-        <i class="bi bi-pencil-fill"></i></button>
-    </td>
-    <td *ngIf="isLogged&&persona.acerca_de_mi!=''">
-      <button class="btn btn-light" routerLink="/editar/{{persona.id}}">
-        <i class="bi bi-trash-fill"></i></button>
-    </td>
+    
+    
   </div>
   
     
