@@ -10,3 +10,7 @@ div{
 h4, h5{
   display: inline;
 }
+
+button{
+  width:100%;
+}
