@@ -26,7 +26,7 @@ export class EducacionComponent implements OnInit {
   cargarEducacion(): void{
     this.educacionS.lista().subscribe(
       data =>{
-        this.educacion = data;
+        this.educacion = data.reverse();
       }
     )
   }
