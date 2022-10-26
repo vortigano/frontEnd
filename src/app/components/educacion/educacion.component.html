@@ -1,32 +1,36 @@
 <div class="row">
   <h3>Educacion</h3>
   <div class="col-lg-2">
-    <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+    <button type="button" class="btn btn-success" routerLink="/nuevaedu" *ngIf="isLogged">
       Agregar educacion
     </button>
   </div>
-    <table class="table">
+    <table class="table table-hover table-dark rounded-3">
       <thead>
         <tr>
-          <th scope="col">Institución [fecha]</th>
+          <th scope="col">Institución</th>
           <th scope="col">Descripción</th>
-          <th scope="col">Edición</th>
+          <th scope="col" *ngIf="isLogged" >Edición</th>
           
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let Educacion of educacion">
-          <td><h2>{{Educacion.nombreE}}</h2></td>
           <td>
-            <textarea readonly name="" id="" cols="30" rows="10">
-              {{Educacion.descripcionE}}
-            </textarea> 
+            <textarea readonly name="" id="" cols="30" rows="6">
+{{Educacion.nombreE}}
+            </textarea>
           </td>
           <td>
-            <button *ngIf="isLogged" class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
-              <i class="bi bi-pencil-fill"></i> EDITAR
+            <textarea readonly name="" id="" cols="30" rows="6">
+{{Educacion.descripcionE}}
+            </textarea> 
+          </td>
+          <td *ngIf="isLogged" >
+            <button class="btn btn-warning" routerLink="/editedu/{{Educacion.id}}">
+              <i class="bi bi-pencil-fill"></i>EDITAR
             </button>
-            <button *ngIf="isLogged" class="btn btn-danger" (click)="borrar(Educacion.id)">
+            <button class="btn btn-danger" (click)="borrar(Educacion.id)">
               <i class="bi bi-trash-fill"></i>BORRAR
             </button>
           </td>
