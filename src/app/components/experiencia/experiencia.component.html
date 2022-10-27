@@ -19,14 +19,10 @@
       <tbody>
         <tr *ngFor="let Experiencia of expe">
           <td>
-            <textarea readonly name="" id="" cols="30" rows="6">
-{{Experiencia.nombreE}}
-            </textarea>
+            <textarea readonly name="" id="" cols="30" rows="6">{{Experiencia.nombreE}}</textarea>
           </td>
           <td>
-            <textarea readonly name="" id="" cols="30" rows="6">
-{{Experiencia.nombreE}}
-            </textarea>
+            <textarea readonly name="" id="" cols="30" rows="6">{{Experiencia.descripcionE}}</textarea>
           </td>
           <td *ngIf="isLogged">
             <button class="btn btn-warning" routerLink="/editexp/{{Experiencia.id}}">
