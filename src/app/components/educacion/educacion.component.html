@@ -17,14 +17,10 @@
       <tbody>
         <tr *ngFor="let Educacion of educacion">
           <td>
-            <textarea readonly name="" id="" cols="30" rows="6">
-{{Educacion.nombreE}}
-            </textarea>
+            <textarea readonly name="" id="" cols="30" rows="6">{{Educacion.nombreE}}</textarea>
           </td>
           <td>
-            <textarea readonly name="" id="" cols="30" rows="6">
-{{Educacion.descripcionE}}
-            </textarea> 
+            <textarea readonly name="" id="" cols="30" rows="6">{{Educacion.descripcionE}}</textarea> 
           </td>
           <td *ngIf="isLogged" >
             <button class="btn btn-warning" routerLink="/editedu/{{Educacion.id}}">
