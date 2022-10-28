@@ -9,8 +9,7 @@ import { SkillService } from 'src/app/service/skill.service';
   styleUrls: ['./edit-skill.component.css']
 })
 export class EditSkillComponent implements OnInit {
-  skill: Skill = null;
-
+  skill: Skill = new Skill("",0.00,"");
   constructor(private skillS: SkillService, private activateRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
