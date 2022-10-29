@@ -1,14 +1,31 @@
-.row{
+.externo{
   padding: 3em;
   background-color: rgb(97, 196, 235);
 }
 
-.titulo_descripcion, .img-proyecto{
-  margin-bottom: 1.2em;
+.titulo_descripcion{
+  /*margin-bottom: 1.2em;*/
   display: inline-block;
   text-align: justify;
 }
 
 .img-proyecto{
+  border-style:solid;
+  border-color:rgb(57, 66, 38);
   box-shadow: 10px 10px 30px #000;
+  height: -webkit-fill-available;
+  
+  display: inline-block;
+}
+
+.container-fluid{
+  box-shadow: 10px 10px 30px #000;
+}
+
+.img-column{
+  text-align: center;
+}
+
+.textarea{
+  height:fit-content;
 }
