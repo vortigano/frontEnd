@@ -10,3 +10,10 @@ div{
 h4, h5{
   display: inline;
 }
+
+#botones{
+  position: absolute; 
+  left:33%;
+  top:85%;
+  bottom:100%;
+}

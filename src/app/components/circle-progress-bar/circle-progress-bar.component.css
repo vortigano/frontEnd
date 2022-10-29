@@ -28,7 +28,9 @@
 }
 
 /*.container*/ .card:hover {
-  transform: translateY(10px);
+  /*transform: translateY(10px);*/
+  /*--mi-valor: 0;*/
+  
   box-shadow: inset 3px 3px 8px 0px #fff5f5;
 }
 
@@ -136,24 +138,36 @@ svg circle{
   stroke-linecap: round;
   transform: translate(5px, 5px);  
   animation-name: ani;
-  animation-duration: 2s;
+  animation-duration: 0s;
   animation-timing-function: cubic-bezier(.12,0,0,.99);
   animation-fill-mode:forwards; 
-  /*animation-iteration-count: infinite;*/
-}
-
-svg circle{
+  animation-iteration-count: 1;
   stroke-dasharray: 440;
   stroke-dashoffset: 440;
-  /*stroke: #ff0000;*/
 }
 
+div:hover > div svg circle{
+    animation-name: ani2;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(.12,0,0,.99);
+  animation-fill-mode:forwards; 
+}
 
 @keyframes ani{
   from{
-    stroke: rgb(00, 00, 00);
+    stroke: rgb(255, 0, 0);
   }
   to {
+    stroke: #00ff00;
+    stroke-dashoffset: var(--mi_valor);
+  }
+}
+
+@keyframes ani2{
+  from {
+    stroke: rgb(255, 0, 0);
+  }
+  to{
     stroke: #00ff00;
     stroke-dashoffset: var(--mi_valor);
   }
