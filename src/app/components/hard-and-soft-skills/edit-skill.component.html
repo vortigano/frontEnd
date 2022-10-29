@@ -12,13 +12,29 @@
                     <label class="form-label" for="nombre">Nombre de la habilidad</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="skill.nombre" required>
                   </div>
-                  <div class="form-group form-white mb-4">
+
+                  <div  class="form-group form-white mb-4">
                     <label class="form-label" for="porcentaje">Ingrese el porcentaje</label>
-                    <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required>
+                    <input (ngModelChange)="validar()" [ngModelOptions]="{updateOn : 'change'}" type="text" class="form-control" id="porcentajex" name="porcentaje" [(ngModel)]="skill.porcentaje" required>
+                    <ng-template *ngIf="!validar(); then thenBlock "></ng-template>
+                    <!--else elseBlock-->
+                    
                   </div>
+                  
+                  <ng-template #thenBlock>
+                    <div class="form-group invalid-tooltip">
+                      <label class="form-label">Ingrese porcentaje 00.00 a 99.99</label>
+                    </div>
+                  </ng-template>
+                  <!--ng-template #elseBlock>
+                    <div class="form-group valid-tooltip">
+                      <label class="form-label">OK</label>
+                    </div>
+                  </ng-template--> 
+                  
                   <div class="form-group form-white mb-4">
                     <label class="form-label" for="img_url">Url de la imagen</label>
-                    <input type="text" class="form-control" id="img_url" name="img_url" [(ngModel)]="skill.img_url" required>
+                    <input type="text" class="form-control" id="img_url" name="img_url" [(ngModel)]="skill.img_url" required>  
                   </div>
                   <button class="btn btn-primary">
                     Actualizar
