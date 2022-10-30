@@ -35,8 +35,22 @@ textarea{
   color:inherit;
   background-color:inherit;
   min-width: 100%;
+  max-width: inherit;
   resize:none;
   height:fit-content;
   min-height: 25vh;
   max-height: 30vh;
+}
+
+.row{
+  align-items: center;
+}
+
+.h3{
+  overflow-wrap: break-word;
+}
+
+.btn-success{
+  width: -webkit-fill-available;
+  overflow-x: hidden;
 }

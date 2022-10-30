@@ -1,12 +1,13 @@
 <div class="row externo">
+
   <p class="h3">Proyectos</p>
-  <div class="col-lg-2">
+  <div class="col mb-2">
     <button type="button" class="btn btn-success" routerLink="/nuevoproyecto" *ngIf="isLogged">
       Agregar educacion
     </button>
   </div>
 
-  <div class="container-fluid rounded-3 bg-dark text-light " *ngFor="let proyecto of proyecto">
+  <div class="container-fluid rounded-3 bg-dark text-light mb-3" *ngFor="let proyecto of proyecto">
     <div class="row">
       <div class="col-sm-12 col-md-7 col-lg-7 bg-dark text-light titulo_descripcion mt-2 mb-2">
         <p class="h3 mt-2 mb-4 text-center bg-dark text-light"> {{proyecto.nombre}}</p>
