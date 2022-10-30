@@ -2,29 +2,74 @@
   <div class="row">
     <div>
       <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-        <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
-        </div>
-        <div class="form-group">
-          <label for="apellido">Apellido</label>
-          <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
-        </div>
-        <div class="form-group">
-          <label for="subtitulo">subtitulo</label>
-          <input type="text" class="form-control" id="subtitulo" name="subtitulo" [(ngModel)]="persona.subtitulo" required>
-        </div>
+
+        <ng-template #opt2>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input enabled type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input enabled type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="subtitulo">subtitulo</label>
+            <input enabled type="text" class="form-control" id="subtitulo" name="subtitulo" [(ngModel)]="persona.subtitulo" required>
+          </div>
+        </ng-template>
+        <ng-template #opt2not>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input disabled type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input disabled type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="subtitulo">subtitulo</label>
+            <input disabled type="text" class="form-control" id="subtitulo" name="subtitulo" [(ngModel)]="persona.subtitulo" required>
+          </div>
+        </ng-template>
+        <ng-template *ngIf="opt==='2'; then opt2 else opt2not"></ng-template>
+
         <div class="form-group">
           <label for="acerca_de_mi">acerca_de_mi</label>
-          <input type="text" class="form-control" id="acerca_de_mi" name="acerca_de_mi" [(ngModel)]="persona.acerca_de_mi" required>
+          
+          <ng-template #opt3>
+            <input enabled type="text" class="form-control" id="acerca_de_mi" name="acerca_de_mi" [(ngModel)]="persona.acerca_de_mi" required>
+          </ng-template>
+          <ng-template #opt3not>
+            <input disabled type="text" class="form-control" id="acerca_de_mi" name="acerca_de_mi" [(ngModel)]="persona.acerca_de_mi" required>
+          </ng-template>
+          <ng-template *ngIf="opt==='3'; then opt3 else opt3not"></ng-template>
         </div>
+
         <div class="form-group">
           <label for="img_perfil">img_perfil</label>
-          <input type="text" class="form-control" id="img_perfil" name="img_perfil" [(ngModel)]="persona.img_perfil" required>
+          
+          <ng-template #opt1>
+            <input enabled type="text" class="form-control" id="img_perfil" name="img_perfil" [(ngModel)]="persona.img_perfil" required>
+          </ng-template>
+          <ng-template #opt1not>
+            <input disabled type="text" class="form-control" id="img_perfil" name="img_perfil" [(ngModel)]="persona.img_perfil" required>
+          </ng-template>
+          <ng-template *ngIf="opt==='1'; then opt1 else opt1not"></ng-template>
+
         </div>
         <div class="form-group">
           <label for="img_banner">img_banner</label>
-          <input type="text" class="form-control" id="img_banner" name="img_banner" [(ngModel)]="persona.img_banner" required>
+          <ng-template #opt4>
+            <input enabled  type="text" class="form-control" id="img_banner" name="img_banner" [(ngModel)]="persona.img_banner" required>
+          </ng-template>
+          <ng-template #opt4not>
+            <input disabled type="text" class="form-control" id="img_banner" name="img_banner" [(ngModel)]="persona.img_banner" required>
+          </ng-template>
+          <ng-template *ngIf="opt==='4'; then opt4 else opt4not"></ng-template>
         </div>
         <!--
           this.nombre = nombre;
