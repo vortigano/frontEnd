@@ -20,7 +20,7 @@ export class EditPersonaComponent implements OnInit {
       data=>{
         this.persona = data;
       }, err=>{
-        alert("Error al modificar personana");
+        alert("Error al modificar persona");
         this.router.navigate(['']);
       }
     )
