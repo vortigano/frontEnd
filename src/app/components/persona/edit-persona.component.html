@@ -38,14 +38,14 @@
                   </div>
           
                   <div class="form-outline form-white mb-4">
-                    <label class="form-label" for="subtitulo">subtitulo</label>
+                    <label class="form-label" for="subtitulo">Subtítulo</label>
                     <input class="form-control" disabled type="text" id="subtitulo" name="subtitulo" [(ngModel)]="persona.subtitulo" required>
                   </div>
                 </ng-template>
                 <ng-template *ngIf="opt==='2'; then opt2 else opt2not"></ng-template>
 
                 <div class="form-outline form-white mb-4">
-                  <label class="form-label" for="acerca_de_mi">Acerca de mi</label>
+                  <label class="form-label" for="acerca_de_mi">Acerca de mí</label>
                   
                   <ng-template #opt3>
                     <textarea class="form-control"  rows="6" enabled type="text" id="acerca_de_mi" name="acerca_de_mi" [(ngModel)]="persona.acerca_de_mi" required></textarea>
