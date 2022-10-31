@@ -120,3 +120,16 @@ div{
   border-color:#00000000;
   background-color:inherit;
 }
+
+textarea{
+  border-style:solid;
+  border-color:rgb(57, 66, 38);
+  color:inherit;
+  background-color:inherit;
+  min-width: 90%;
+  max-width: inherit;
+  resize:none;
+  height:fit-content;
+  min-height: 25vh;
+  max-height: 30vh;
+}
