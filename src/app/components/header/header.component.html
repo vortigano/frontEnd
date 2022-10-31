@@ -50,16 +50,12 @@
 <!--El contenedor exterior de fondo negro-->
 <!--la fila tiene una columna con una imagen con un gráfico con altura limitada por css-->
 
-<div class="container-flex" style="background-color: #daba07;">
-  <div class="row-flex" style="text-align:center; align-items: center;">
-      <div class="col g-0">
-        <td *ngIf="isLogged">
-          <button class="btn btn-light" routerLink="/editar/{{persona.id}}/4">
-            <i class="bi bi-pencil-fill"></i></button>
-        </td>
-        <!--img id="img-banner" src="../../../assets/header/banner/banner_space.jpg" 
-        alt="Banner" style="width: 100%;"-->
-        <img id="img-banner" src={{persona.img_banner}} alt="Banner" style="width: 100%;">
+<div class="container-flex">
+  <div class="row" id="row-banner">
+      <div class="col position-relative">
+          
+        <img id="img-banner" src={{persona.img_banner}} alt="Banner">
+        <button *ngIf="isLogged" class="btn btn-warning position-absolute" routerLink="/editar/{{persona.id}}/4"><i class="bi bi-pencil-fill"></i></button>
         
       </div>
       
