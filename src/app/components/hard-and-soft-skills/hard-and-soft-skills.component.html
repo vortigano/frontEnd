@@ -1,29 +1,28 @@
 <div class="row" >
-  <h2>Hard & Soft Skills</h2>
+  <p class="h3">Hard & Soft Skills</p>
   <div class="col-lg-2">
-    <button class="btn btn-success"  type="button" routerLink="/nuevaskill" *ngIf="isLogged">Nueva Habilidad</button>
+    <button id="btnnuevahabilidad" type="button" class="btn btn-success" routerLink="/nuevaskill" *ngIf="isLogged">
+      Nueva Habilidad
+    </button>
   </div>
-</div>
-
-<div class="row row-cols-1 row-cols-md-4" style="justify-content: space-evenly;">
-  
-  <div class="col mb-4" style="position: relative; width:auto; padding:0%" *ngFor="let skill of skill">
-    <app-circle-progress-bar
-      [progress]="(skill.porcentaje)" 
-      [label]="(skill.nombre)" 
-      [url]="(skill.img_url)">
-    </app-circle-progress-bar>
-
-    <div id="botones" *ngIf="isLogged" stile="background-color: transparent;">
-      <button class="btn btn-warning" routerLink="/editskill/{{skill.id}}">
-        <i class="bi bi-pencil-fill"></i></button>
+  <div class="row row-cols-1 row-cols-md-4" style="justify-content: space-evenly;">
     
+    <div class="col mb-4" style="position: relative; width:auto; padding:0%" *ngFor="let skill of skill">
+      <app-circle-progress-bar
+        [progress]="(skill.porcentaje)" 
+        [label]="(skill.nombre)" 
+        [url]="(skill.img_url)">
+      </app-circle-progress-bar>
+
+      <div id="botones" *ngIf="isLogged" stile="background-color: transparent;">
+        <button class="btn btn-warning" routerLink="/editskill/{{skill.id}}">
+          <i class="bi bi-pencil-fill"></i></button>
       
-    
-      <button class="btn btn-danger" (click)="delete(skill.id)">
-        <i class="bi bi-trash-fill"></i></button>
-      </div>
-  </div>
-  
-  
+        
+      
+        <button class="btn btn-danger" (click)="delete(skill.id)">
+          <i class="bi bi-trash-fill"></i></button>
+        </div>
+    </div>
+  </div>  
 </div>
