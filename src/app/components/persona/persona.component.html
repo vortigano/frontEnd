@@ -1,34 +1,32 @@
-<div class="row g-0" >
-  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 g-0" style="background-color:yellowgreen">
+<div class="container-fluid pb-2 pt-2">
+<div class="row g-0 rounded-3 bg-dark text-light" >
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 rounded-3 bg-dark text-light">
     <td *ngIf="isLogged">
-      <button class="btn btn-light" routerLink="/editar/{{persona.id}}"><!--{{persona.id}}">-->
-        <i class="bi bi-pencil-fill">KK</i></button>
+      <button class="btn btn-warning" routerLink="/editar/{{persona.id}}/1"><!--{{persona.id}}">-->
+        <i class="bi bi-pencil-fill"></i></button>
     </td>
-    <img id="fotodeperfil" src="{{persona.img_perfil}}" class="img-fluid">
+    <img class="img-fluid" id="fotodeperfil" src="{{persona.img_perfil}}">
     
       <p id="nombre">{{persona.nombre}}&nbsp;{{persona.apellido}}</p>
       <p>{{persona.subtitulo}}</p>
     <td *ngIf="isLogged">
-      <button class="btn btn-light" routerLink="/editar/{{persona.id}}">
+      <button class="btn btn-warning" routerLink="/editar/{{persona.id}}/2">
         <i class="bi bi-pencil-fill"></i></button>
     </td>
   </div>
-  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 g-0 " style="background-color:brown">
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 g-0 rounded-3 bg-dark text-light">
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item" *ngIf="isLogged">
-        <button class="btn btn-success" routerLink="/editar/{{persona.id}}">
+        <button class="btn btn-warning" routerLink="/editar/{{persona.id}}/3">
           <i class="bi bi-pencil-fill"></i></button>
       </li>
       <li class="list-group-item" *ngIf="isLogged&&persona.acerca_de_mi!=''">
-        <button class="btn btn-danger" routerLink="/editar/{{persona.id}}">
+        <button class="btn btn-danger" (click)="onUpdate()">
           <i class="bi bi-trash-fill"></i></button>
       </li>  
     </ul>
     <h3 id="acerca_de_mi" *ngIf="persona.acerca_de_mi!=''" >Acerca de mí</h3>
-    <p>{{persona.acerca_de_mi}}</p>
-    
-    
-  </div>
-  
-    
+    <textarea readonly>{{persona.acerca_de_mi}}</textarea>
+  </div>    
+</div>
 </div>
