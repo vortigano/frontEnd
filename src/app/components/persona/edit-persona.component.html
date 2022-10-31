@@ -45,7 +45,7 @@
                 <ng-template *ngIf="opt==='2'; then opt2 else opt2not"></ng-template>
 
                 <div class="form-outline form-white mb-4">
-                  <label class="form-label" for="acerca_de_mi">acerca_de_mi</label>
+                  <label class="form-label" for="acerca_de_mi">Acerca de mi</label>
                   
                   <ng-template #opt3>
                     <textarea class="form-control"  rows="6" enabled type="text" id="acerca_de_mi" name="acerca_de_mi" [(ngModel)]="persona.acerca_de_mi" required></textarea>
@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="form-outline form-white mb-4">
-                  <label class="form-label" for="img_perfil">img_perfil</label>
+                  <label class="form-label" for="img_perfil">Imagen de perfil</label>
                   
                   <ng-template #opt1>
                     <input class="form-control" enabled type="text" id="img_perfil" name="img_perfil" [(ngModel)]="persona.img_perfil" required>
@@ -69,7 +69,7 @@
 
                 </div>
                 <div class="form-outline form-white mb-4">
-                  <label class="form-label" for="img_banner">img_banner</label>
+                  <label class="form-label" for="img_banner">Imagen de banner</label>
                   <ng-template #opt4>
                     <input class="form-control" enabled  type="text" id="img_banner" name="img_banner" [(ngModel)]="persona.img_banner" required>
                   </ng-template>
